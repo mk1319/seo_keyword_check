@@ -18,15 +18,13 @@ function EditorConvertToHTML({handleOnChange}){
 
   
     return (
-      <div>
         <Editor
           editorState={editor}
           webDriverTestID="Editor"
-          wrapperClassName="demo-wrapper"
-          editorClassName="demo-editor"
+          wrapperClassName="editor-action"
+          editorClassName="editor-content"
           onEditorStateChange={onEditorStateChange}
         />
-      </div>
     )
   
 }

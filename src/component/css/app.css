@@ -1,0 +1,47 @@
+.main-body{
+    margin-top: 1vw;
+}
+
+.action-section{
+    background-color: #fff;
+    /* border: 1px solid blueviolet; */
+    /* box-shadow: 1px 1px 1px 1px sandybrown; */
+    border-radius: 0.475rem!important;
+    margin: 1vw;
+    box-shadow: 1px 2px 5px 1px rgb(0 0 0 / 20%);
+}
+
+.editor-content {
+    height: 80vh;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-thumb{
+    background: #dcd7d7;
+    border-radius: 1px;
+}
+
+.keyword-section{
+    height:100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 2px 5px 1px rgb(0 0 0 / 20%);
+}
+.add-keyword{
+    width:100%;
+    box-shadow: 0px 2px 0px 0px rgb(0 0 0 / 20%);
+}
+.inrange-keyword{
+    height: 25%;
+    overflow-x: scroll;
+    box-shadow: 0px 2px 0px 0px rgb(0 0 0 / 20%);
+    margin-top: 10px;
+}
+.outrange-keyword{
+    height: 25%;
+    margin-top: 10px;
+    overflow-x: scroll;
+}

@@ -63,14 +63,14 @@ export default function KeywordSection(props) {
 
 
     return (
-        <div style={{display: "flex",flexFlow:"column"}}>
-                <div className='col-4'>
+        <div className='row flex-column keyword-section'>
+                <div className='col-4 add-keyword' style={{width:'100%'}}>
                 <AddKeyword  handleSubmit={handleSubmit}/>
                 </div>
-                <div className='col-4'>
+                <div className='col-4 inrange-keyword' style={{width:'100%'}}>
                 <KeywordList keywords={keywords.filter((e)=>e.current <= e.max)} handleRemove={handleRemove}/>
                 </div>
-                <div className='col-4'>
+                <div className='col-4 outrange-keyword' style={{width:'100%'}}>
                 <KeywordList keywords={keywords.filter((e)=>e.current > e.max)} handleRemove={handleRemove}/>
                 </div>
         </div>  
