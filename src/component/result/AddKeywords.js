@@ -25,13 +25,13 @@ function AddKeyword(props) {
       </div>
       <div className="form-group">
           <label for="Min">Min</label>
-          <input type="number" className="form-control" id="Min" aria-describedby="Min" placeholder="Minimum arrive" value={minArrive}
+          <input type="number" className="form-control" id="Min" aria-describedby="Min" placeholder="Minimum value" value={minArrive}
             onChange={(e)=>{setMinArrive(e.target.value)}}
            />
       </div>
       <div className="form-group">
           <label for="Max">Max</label>
-          <input type="number" className="form-control" id="Max" aria-describedby="Max" placeholder="Maximum arrive" value={maxArrive}
+          <input type="number" className="form-control" id="Max" aria-describedby="Max" placeholder="Maximum value" value={maxArrive}
             onChange={(e)=>{setMaxArrive(e.target.value)}}
            />
       </div>
