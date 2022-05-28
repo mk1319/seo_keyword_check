@@ -17,7 +17,6 @@ function KeywordList(props) {
     const [keywords, setKeywords] = useState([])
 
     useEffect(() => {
-        console.log("PROPS.KEYWORD",props.keywords)
         if(props.keywords&&Array.isArray(props.keywords)){
             setKeywords(props.keywords)
         }
@@ -33,13 +32,14 @@ function KeywordList(props) {
         } else if(e.current == 0 ){
             className = "badge bg-secondary"
         } else if(e.current > 0 && e.current < e.max ){
+            count = e.max - e.current
             className = "badge bg-warning"
         } else if(e.current > e.max ){
             className = "badge bg-danger"
             count = e.current - e.max
         }
 
-        return <span className={className}>
+        return <span className={`${className} keyword`}>
         {e.value} {count?`      ${count}`:''}{"       "}
         <svg
             xmlns="http://www.w3.org/2000/svg"

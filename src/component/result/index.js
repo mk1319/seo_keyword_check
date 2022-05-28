@@ -7,8 +7,8 @@ export default function KeywordSection(props) {
     const [keywords, setkeywords] = useState([])
     const [handleRefresh, setHandleRefresh] = useState(false)
 
-   
     useEffect(()=>{
+
 
     let  htmlParse = props.editorContent.toLowerCase();
    
@@ -24,6 +24,11 @@ export default function KeywordSection(props) {
         currentKeywords.push(e)
     })
     setkeywords(currentKeywords)
+
+    if(keywords.length ==0 && localStorage.getItem("keywords")&&Array.isArray(JSON.parse(localStorage.getItem("keywords")))&&JSON.parse(localStorage.getItem("keywords")).length){
+        let storeKeyword = JSON.parse(localStorage.getItem("keywords"))
+        setkeywords(storeKeyword)
+    }
     setHandleRefresh(!handleRefresh)
 
     },[props.editorContent])
@@ -49,11 +54,14 @@ export default function KeywordSection(props) {
             current:current
         })
         setkeywords(preKeywords)
+        localStorage.setItem("keywords",JSON.stringify(preKeywords))
+    
         setHandleRefresh(!handleRefresh)
     }
 
     const handleRemove = (value) =>{
         let result = keywords.filter((e)=>e.value != value)
+        localStorage.setItem("keywords",JSON.stringify(result))
         setkeywords(result)
     }
 

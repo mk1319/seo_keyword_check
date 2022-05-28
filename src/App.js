@@ -1,9 +1,6 @@
 import React,{useState,useEffect} from 'react';
-import EditorApp from './component/editor/Editor';
 import EditorConvertToHTML from './component/editor/EditorWrapper';
 import KeywordSection from './component/result';
-import AddKeyword from './component/result/AddKeywords';
-import KeywordList from './component/result/KeywordList';
 import './component/css/app.css';
 
 function App() {
